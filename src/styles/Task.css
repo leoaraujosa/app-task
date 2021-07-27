@@ -1,0 +1,29 @@
+.task-container {
+    background-color: #444;
+    margin: 8px 0;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    border-left: 6px solid rgb(255, 0, 0);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex end;
+}
+
+.completed-task-button, .remove-task-button, .details-task-button {
+    background-color: #444;
+    border: none;
+    font-size: 24px;
+    color: cornsilk;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.completed-task-button:hover, .remove-task-button:hover, .details-task-button:hover {
+    color: rgb(22, 22, 21);
+}
