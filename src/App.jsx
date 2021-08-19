@@ -24,7 +24,7 @@ function App() {
     {
       id: "1",
       title: "Fazer o café",
-      completed: false,
+      completed: true,
       date: formattedDate(),
     },
     {

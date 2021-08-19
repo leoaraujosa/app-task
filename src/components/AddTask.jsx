@@ -29,7 +29,7 @@ const AddTask = ({taskAddition}) => {
                 value={inputData}
                 />
                 <div className="add-task-button">
-                    <Button onClick={addTaskClick}>Adicionar</Button>
+                    <Button onClick={addTaskClick} disabled={!inputData.length}>Adicionar</Button>
                 </div>
 
             </div>
