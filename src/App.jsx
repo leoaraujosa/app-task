@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
+import TaskCompleted from "./components/TaskCompleted";
 
 import "./App.css";
 
@@ -24,7 +25,7 @@ function App() {
     {
       id: "1",
       title: "Fazer o café",
-      completed: true,
+      completed: false,
       date: formattedDate(),
     },
     {
@@ -71,11 +72,18 @@ function App() {
         <div className="container-tasks">
           <Header name="Add New Task" />
           <AddTask taskAddition={taskAddition}/>
-          <TaskList 
-          tasks={tasks}
-          removeTask={removeTask}
-          completedTask={completedTask}
-          />
+          
+            <TaskList 
+              tasks={tasks}
+              removeTask={removeTask}
+              completedTask={completedTask}
+              hiddenCompleted
+            />
+           
+        </div>
+        <div className="container-tasks">
+          <TaskCompleted />
+          <Header name="Tasks Completed" />
         </div>
       </div>
     </>

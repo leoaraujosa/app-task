@@ -3,10 +3,13 @@ import {CgClose, CgCheck} from 'react-icons/cg'
 
 import '../styles/Task.css';
 
-const Task = ({task, removeTask, completedTask}) => {
+const Task = ({task, removeTask, completedTask, hidden = false}) => {
     return ( 
         <>
-            <div className="task-container" style={task.completed ? {borderLeft: "6px solid chartreuse"} : {}}> {/* Se o completed for == true a borda da task muda de cor*/}
+            <div className="task-container" style={{ 
+              borderLeft: task.completed ? "6px solid chartreuse" : '',
+              display: hidden ? "none" : "flex"
+              }}>
                 <div className="task-title">
                     {task.title}
                 </div>
